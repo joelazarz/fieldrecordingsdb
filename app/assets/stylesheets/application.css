@@ -21,7 +21,7 @@
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
     width: 98%;
-    height: 100v%;
+    height: 100% ;
     -webkit-animation: fadein 1.5s;
  }
 
