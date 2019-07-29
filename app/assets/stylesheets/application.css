@@ -1,0 +1,127 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+ body {
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 0.6fr 1.4fr;
+    -webkit-animation: fadein 1.5s;
+ }
+
+ .login {
+    position: fixed;
+    margin-left: 2em;
+    margin-top: 3em;
+    filter: opacity(0.7);
+    background-color: lightpink;
+    padding: 3em;
+    font-size: 0.6em;
+ }
+
+
+ .menu-bar {
+     font-size: 0.6em;
+     background-color: honeydew;
+     filter: opacity(0.7);
+     position: fixed;
+     margin-left: 6rem;
+     margin-top: 5rem;
+     padding: 8em;
+ }
+
+h1 {
+    font-family: 'Fira Code', monospace;
+    font-size: 5em;
+    margin-top: 12rem;
+    color: rgb(17, 17, 17)
+
+}
+
+p {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.5em;
+    grid-row-start: 1;
+    grid-column-start: 2;
+}
+
+:any-link {
+    font-family: 'Fira Code', monospace;
+    padding: 1em;
+    text-decoration: none;
+
+}
+
+:any-link:hover {
+    color: azure;
+}
+
+.list {
+    font-size: 2rem;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    font-family: 'Fira Code', monospace;
+}
+
+.form {
+    font-family: 'Fira Code', monospace;
+    display: inline-block;
+    margin: inherit;
+    padding: 20px 32px 20px 20px;
+}
+
+.form input {
+    font-family: 'Fira Code', monospace;
+    width: 90%;
+    height: 2em;
+    padding: 0.5em;
+    margin-bottom: 5px;
+}
+
+.form textarea {
+    display: block;
+    width: 92%;
+    min-height: 120px;
+}
+
+.login-form {
+    font-family: 'Fira Code', monospace;
+    display: inline-block;
+    margin: inherit;
+    padding: 20px 32px 20px 20px;
+}
+
+.login-form input {
+    font-family: 'Fira Code', monospace;
+    width: 90%;
+    height: 2em;
+    padding: 0.5em;
+    margin-bottom: 5px;
+}
+
+form input[type='submit']  {
+    display: inline-block;
+    width: 70px;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+

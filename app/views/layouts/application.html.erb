@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FieldRecordingDB</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', "https://fonts.googleapis.com/css?family=Fira+Code&display=swap" %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <div class="login">
+      <% if logged_in? %>
+      <%= link_to "Logout", logout_path, method: :delete %>
+      <% else %>
+      <%= link_to "Login", login_path %>
+      <% end %>
+      <%= link_to "Sign Up", signup_path %>
+    </div>
+
+    
+    <div class="menu-bar">
+        <%= link_to "Locations", locations_path %>
+        <%= link_to "Artists", artists_path %>
+        <%= link_to "Field Recordings", field_recordings_path %>
+    </div>
+
+
+
+
+
+
+
+
+
+    <%= yield %>
+  </body>
+</html>
