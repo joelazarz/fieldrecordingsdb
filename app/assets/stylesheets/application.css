@@ -42,8 +42,8 @@
      filter: opacity(0.7);
      position: fixed;
      margin-left: 6rem;
-     margin-top: 3rem;
-     padding: 8em;
+     margin-top: 3.5rem;
+     padding: 7em;
  }
 
 h1 {
@@ -73,7 +73,7 @@ p {
 }
 
 .list {
-    font-size: 2rem;
+    font-size: 2em;
     grid-column-start: 2;
     grid-column-end: 3;
     font-family: 'Fira Code', monospace;
