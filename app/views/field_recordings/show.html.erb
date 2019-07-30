@@ -20,6 +20,10 @@ comments:
 <%= link_to "add comment", new_comment_path(@field_recording) %> 
 </div>
 
+<div class="player">
+    <audio controls><source src="<%= (url_for(@field_recording.recording)) %>"></audio> 
+</div>
+
 
 
 

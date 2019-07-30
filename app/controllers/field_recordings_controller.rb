@@ -40,6 +40,6 @@ class FieldRecordingsController < ApplicationController
   private
 
   def field_recording_params
-    params.require(:field_recording).permit(:title, :date, :description)
+    params.require(:field_recording).permit(:title, :date, :description, :photos, :recording)
   end
 end
