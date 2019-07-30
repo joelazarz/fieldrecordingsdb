@@ -6,13 +6,20 @@ artist:<%= link_to @artist.name, artist_path(@artist) %><br>
 location: <%= @location.name %><br>
 date: <%= @field_recording.date %><br>
 description: <%= @field_recording.description %><br>
-<br>
-comments:
-<br>
-<%= link_to "add comment", new_comment_path %> 
-<!-- #new_comment_path -- getting to correct comment/location/fieldrecording -->
-
-
-
-
 </div>
+<br>
+<div class="list">
+comments:
+
+<% @comments.each do |c| %>
+<li>"<%= c.comment %>" - <%= c.user.username %></li>
+<% end %>
+
+
+<br>
+<%= link_to "add comment", new_comment_path(@field_recording) %> 
+</div>
+
+
+
+
