@@ -7,7 +7,8 @@ class FieldRecordingsController < ApplicationController
     @field_recording = FieldRecording.find(params[:id])
     @artist = Artist.find { |a| a.id == @field_recording.artist_id }
     @location = Location.find { |l| l.id == @field_recording.location_id }
-    @comments = Comment.select { |c| c.field_recording_id == @field_recording.id }
+    @comments = @field_recording.comments
+    # @comments = Comment.select { |c| c.field_recording_id == @field_recording.id }
   end
 
   def new
