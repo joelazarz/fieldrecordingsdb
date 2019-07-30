@@ -1,2 +1,18 @@
-<h1>FieldRecordings#show</h1>
-<p>Find me in app/views/field_recordings/show.html.erb</p>
+<h1>Field Recordings</h1>
+
+<div class="list">
+title: <%= @field_recording.title %><br>
+artist:<%= link_to @artist.name, artist_path(@artist) %><br>
+location: <%= @location.name %><br>
+date: <%= @field_recording.date %><br>
+description: <%= @field_recording.description %><br>
+<br>
+comments:
+<br>
+<%= link_to "add comment", new_comment_path %> 
+<!-- #new_comment_path -- getting to correct comment/location/fieldrecording -->
+
+
+
+
+</div>

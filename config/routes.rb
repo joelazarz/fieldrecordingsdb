@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   #field recording routes
   get "/fieldrecordings", to: "field_recordings#index", as: "field_recordings"
   get "/fieldrecordings/new", to: "field_recordings#new", as: "new_field_recording"
@@ -31,4 +31,7 @@ Rails.application.routes.draw do
   post "/sessions/artist", to: "sessions#log_artist"
   delete "/logout", to: "sessions#destroy", as: "logout"
 
+  #comment routes
+  get "/comments/new", to: "comments#new", as: "new_comment"
+  post "/comments", to: "comments#create"
 end
