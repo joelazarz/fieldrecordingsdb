@@ -12,6 +12,10 @@ Rails.application.routes.draw do
   get "/artists/:id", to: "artists#show", as: "artist"
   post "/artists", to: "artists#create"
 
+  #follow routes
+  put "/artists/:id", to: "follows#create", as: "create_follow"
+  delete "/artists/:id", to: "follows#destroy", as: "delete_follow"
+
   #location routes
   get "/locations", to: "locations#index", as: "locations"
   get "/locations/new", to: "locations#new", as: "new_location"

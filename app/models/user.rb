@@ -1,5 +1,6 @@
 class User < ApplicationRecord
     has_secure_password
+    has_many :follows
     has_many :field_recordings, through: :follows
     has_many :comments
 
