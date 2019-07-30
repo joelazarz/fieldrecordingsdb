@@ -16,9 +16,14 @@
       <% if logged_in? %>
       <%= link_to "Logout", logout_path, method: :delete %>
       <% else %>
-      <%= link_to "Login", login_path %>
+      <%= link_to "User Login", login_user_path %>
+      <%= link_to "Artist Login", login_artist_path %>
       <% end %>
-      <%= link_to "Sign Up", signup_path %>
+    </div>
+    
+    <div class="signup">
+        <%= link_to "User Sign Up", user_signup_path %>
+        <%= link_to "Artist Sign Up", artist_signup_path %>
     </div>
 
     

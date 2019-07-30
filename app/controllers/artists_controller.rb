@@ -13,14 +13,10 @@ class ArtistsController < ApplicationController
 
   def create
     @artist = Artist.create!(artist_params)
-    if @artist.valid?
-    @artist.save
-    redirect_to @artist
-    else
-    flash[:message] = @artist.errors.full_messages[0]
-    render :new
-    end
+    session[:artist_id] = @artist.id
+    redirect_to artist_path(@artist)
   end
+
 
   def edit
     @artist = Artist.find(params[:id])
@@ -36,7 +32,7 @@ class ArtistsController < ApplicationController
   private
 
   def artist_params
-    params.require(:artist).permit(:name, :description)
+    params.require(:artist).permit(:name, :username, :password, :email, :description)
   end
 
 end

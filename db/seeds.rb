@@ -6,14 +6,4 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Artist.create!(name:"joe",description:"artist description")
-Artist.create!(name:"alexa",description:"artist description")
-Artist.create!(name:"kenny",description:"artist description")
-Artist.create!(name:"mikhail",description:"artist description")
 
-Location.create!(name:"Ginger Hill, Jamaica",description:"location description")
-Location.create!(name:"YS Falls, Jamaica",description:"St. Elizabeth Parish")
-Location.create!(name:"Negril, Jamaica",description:"location description")
-Location.create!(name:"Brooklyn, NY",description:"location description")
-Location.create!(name:"Syracuse, NY",description:"location description")
-Location.create!(name:"New York, NY",description:"location description")

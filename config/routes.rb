@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   #artist routes
   get "/artists", to: "artists#index", as: "artists"
-  get "/artists/new", to: "artists#new", as: "new_artist"
+  get "/artists/new", to: "artists#new", as: "artist_signup"
   get "/artists/:id", to: "artists#show", as: "artist"
   post "/artists", to: "artists#create"
 
@@ -21,12 +21,14 @@ Rails.application.routes.draw do
   #user routes
   get "/users", to: "users#index", as: "users"
   get "/users/:id", to: "users#show", as: "user"
-  get "/signup", to: "users#new", as: "signup"
+  get "/signup", to: "users#new", as: "user_signup"
   post "/users", to: "users#create"
 
   #session routes
-  get "/login", to: "sessions#new", as: "login"
-  post "/sessions", to: "sessions#create"
+  get "/login", to: "sessions#new_user", as: "login_user"
+  get "/login/artist", to: "sessions#new_artist", as: "login_artist"
+  post "/sessions/user", to: "sessions#log_user"
+  post "/sessions/artist", to: "sessions#log_artist"
   delete "/logout", to: "sessions#destroy", as: "logout"
 
 end
