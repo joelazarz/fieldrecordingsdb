@@ -32,6 +32,10 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy", as: "logout"
 
   #comment routes
+  get "/comments/:id", to: "comments#show", as: "comment"
   get "/comments/new/:id", to: "comments#new", as: "new_comment"
+  get "/comments/edit/:id", to: "comments#edit", as: "edit_comment"
   post "/comments", to: "comments#create"
+  patch "/comments/:id", to: "comments#update"
+  delete "/comments/:id", to: "comments#destroy", as: "delete_comment"
 end

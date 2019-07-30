@@ -18,12 +18,23 @@ class CommentsController < ApplicationController
   end
 
   def edit
+    @comment = Comment.find(params[:id])
+    @field_recording = @comment.field_recording
+    @user_id = session[:user_id]
   end
 
   def update
+    @comment = Comment.find(params[:id])
+    @comment.update(comment_params)
+    @field_recording = @comment.field_recording
+    redirect_to field_recording_path(@field_recording.id)
   end
 
   def destroy
+    @comment = Comment.find(params[:id])
+    @field_recording = @comment.field_recording
+    @comment.destroy
+    redirect_to user_path(session[:user_id])
   end
 
   private

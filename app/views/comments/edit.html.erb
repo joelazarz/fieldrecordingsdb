@@ -1,2 +1,13 @@
-<h1>Comments#edit</h1>
-<p>Find me in app/views/comments/edit.html.erb</p>
+<div class="list">
+Edit comment on <%= @field_recording.title %>    
+<br>    
+<br> 
+
+<%= form_for @comment do |f| %>
+<%= f.label :comment %>
+<%= f.text_area :comment%>
+<%= f.hidden_field :user_id, :value => @user_id %>
+<%= f.hidden_field :field_recording_id, :value => @field_recording.id %>
+<%= f.submit "Submit" %>
+<% end %>
+</div>
