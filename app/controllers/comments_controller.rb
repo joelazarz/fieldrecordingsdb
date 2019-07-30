@@ -1,4 +1,4 @@
-class NotationsController < ApplicationController
+class CommentsController < ApplicationController
   
   
   def index
