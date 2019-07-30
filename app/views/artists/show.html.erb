@@ -1,2 +1,8 @@
 <h1><%= @artist.name %></h1>
 <p><%= @artist.description %></p>
+
+<div class="photo">
+<% if @artist.avatar.attached? %>
+    <img src="<%= (url_for(@artist.avatar)) %>">
+<% end %>
+</div>
