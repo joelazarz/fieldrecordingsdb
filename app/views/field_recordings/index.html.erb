@@ -2,6 +2,6 @@
 <ul>
 <% @field_recordings.each do |fieldrecording| %>
 <li>
-<%=link_to fieldrecording.title, field_recordings_path(fieldrecording.id) %>
+<%=link_to fieldrecording.title, field_recording_path(fieldrecording) %>
 </li>
 <% end %>
