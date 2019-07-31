@@ -1,14 +1,14 @@
 <h1><%= @user.username %></h1>
 <div class="list">
-        Artists you follow
-        <ul>
-        <% @follows.each do |f| %>
-        <li> <%= link_to f.artist.name, artist_path(f.artist_id) %> </li>
-        <% end %>
-        </ul>
-        </div>
-<div class="list">
+Artists you follow
+<ul>
+<% @follows.each do |f| %>
+<li> <%= link_to f.artist.name, artist_path(f.artist_id) %> </li>
+<% end %>
+</ul>
+</div>
 
+<div class="list">
 Comments on Field Recordings
 <ul>
 <% @comments.each do |c| %>
@@ -16,11 +16,7 @@ Comments on Field Recordings
 <%= link_to "edit comment", edit_comment_path(c.id) %>
 <%= link_to "delete comment", c, method: :delete , data: {:confirm => "Delete comment?" } ,
 :title => "Delete #{c.comment}"%>
-
 </li>
 <% end %>
 </ul>
-
-
-
 </div>

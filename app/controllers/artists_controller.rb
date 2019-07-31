@@ -1,4 +1,5 @@
 class ArtistsController < ApplicationController
+
   def index
     @artists = Artist.all
   end
@@ -34,4 +35,5 @@ class ArtistsController < ApplicationController
   def artist_params
     params.require(:artist).permit(:name, :username, :password, :email, :description, :avatar)
   end
+  
 end

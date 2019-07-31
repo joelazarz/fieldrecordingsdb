@@ -13,9 +13,11 @@
 
 <p><%= @artist.description %></p>
 
-<div class="list"><ul><% @field_recordings.each do |f|%>
+<div class="list">
+<ul><% @field_recordings.each do |f|%>
 <li><%= link_to f.title + " " + f.date.to_s, field_recording_path(f.id)%></li>
-<% end %></ul></div>
+<% end %></ul>
+</div>
 
 <div class="photo">
 <% if @artist.avatar.attached? %>
