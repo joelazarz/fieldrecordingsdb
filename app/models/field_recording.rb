@@ -5,6 +5,6 @@ class FieldRecording < ApplicationRecord
   has_many :follows
   has_many_attached :photos
   has_one_attached :recording
+  validates :title, presence: true
   accepts_nested_attributes_for :locations
-  validates :name, presence: true
 end

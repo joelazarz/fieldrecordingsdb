@@ -4,7 +4,6 @@
 <%= form_for @field_recording do |f| %>
 <%= f.label :title %>
 <%= f.text_field :title %>
-
 <%= f.fields_for @location do |location| %>
     <%= location.label :name, "Location" %>
     <%= location.text_field :name %>
