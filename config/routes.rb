@@ -20,7 +20,9 @@ Rails.application.routes.draw do
   get "/locations", to: "locations#index", as: "locations"
   get "/locations/new", to: "locations#new", as: "new_location"
   get "/locations/:id", to: "locations#show", as: "location"
+  get "/locations/:id/edit", to: "locations#edit", as: "edit_location"
   post "/locations", to: "locations#create"
+  patch "/locations/:id", to: "locations#update"
 
   #user routes
   get "/users", to: "users#index", as: "users"

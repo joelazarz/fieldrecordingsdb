@@ -30,6 +30,8 @@ class LocationsController < ApplicationController
 
   def update
     @location = Location.find(params[:id])
+    @location.update(location_params)
+    redirect_to location_path(@location)
   end
 
   def destroy
