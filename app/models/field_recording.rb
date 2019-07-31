@@ -5,4 +5,6 @@ class FieldRecording < ApplicationRecord
   has_many :follows
   has_many_attached :photos
   has_one_attached :recording
+
+  validates :name, presence: true
 end

@@ -1,6 +1,7 @@
 class LocationsController < ApplicationController
   def index
     @locations = Location.all
+    @locations = @locations.sort_by { |l| l.name.downcase }
   end
 
   def show
@@ -16,7 +17,7 @@ class LocationsController < ApplicationController
     @location = Location.create(location_params)
     if @location.valid?
       @location.save
-      redirect_to @location
+      redirect_to locations_path
     else
       flash[:message] = @location.errors.full_messages[0]
       render :new
