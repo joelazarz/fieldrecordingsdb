@@ -1,7 +1,7 @@
 
  body {
     display: grid;
-    padding: 1rem;
+    padding: 0.1rem;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
     width: 98%;
@@ -57,13 +57,12 @@ p {
 
 :any-link {
     font-family: 'Fira Code', monospace;
-    padding: 1em;
     text-decoration: none;
 
 }
 
 :any-link:hover {
-    color: azure;
+    color: rgb(4, 134, 9);
 }
 
 .list {

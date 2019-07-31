@@ -1,2 +1,9 @@
 <h1><%= @location.name %></h1>
 <p><%= @location.description %></p>
+<div class="list">
+<ul>
+<% @field_recordings.each do |f| %>
+<li><%= link_to f.title + " - " + f.date.to_s, field_recording_path(f)%></li>
+<% end %>
+
+</ul></div>

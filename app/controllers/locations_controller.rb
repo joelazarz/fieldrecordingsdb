@@ -5,6 +5,7 @@ class LocationsController < ApplicationController
 
   def show
     @location = Location.find(params[:id])
+    @field_recordings = @location.field_recordings
   end
 
   def new
@@ -14,28 +15,26 @@ class LocationsController < ApplicationController
   def create
     @location = Location.create(location_params)
     if @location.valid?
-    @location.save
-    redirect_to @location
+      @location.save
+      redirect_to @location
     else
-    flash[:message] = @location.errors.full_messages[0]
-    render :new
+      flash[:message] = @location.errors.full_messages[0]
+      render :new
     end
   end
 
   def edit
     @location = Location.find(params[:id])
-
   end
 
   def update
     @location = Location.find(params[:id])
-
   end
 
   def destroy
   end
 
-  private 
+  private
 
   def location_params
     params.require(:location).permit(:name, :description)
