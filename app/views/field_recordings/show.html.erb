@@ -2,8 +2,7 @@
 
 <div class="list">
 title: <%= @field_recording.title %><br>
-artist:<%= link_to @artist.name, artist_path(@artist) %><br>
-location: <%= @location.name %><br>
+<!-- add artist and location info again -->
 date: <%= @field_recording.date %><br>
 description: <%= @field_recording.description %><br>
 </div>
@@ -23,7 +22,6 @@ comments:
 <div class="player">
     <audio controls><source src="<%= (url_for(@field_recording.recording)) %>"></audio> 
 </div>
-
 
 
 

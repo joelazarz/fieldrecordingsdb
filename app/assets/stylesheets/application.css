@@ -115,9 +115,19 @@ form input[type='submit']  {
 }
 
 .player {
+    background: rgb(12, 11, 11);
     position: fixed;
     bottom: 0;
-    width: 100%;
+    margin-left: -2em;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.player audio {
+    display: flex;
+    filter: invert(1);
+    width: 50vw;
 }
 
 
