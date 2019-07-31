@@ -15,9 +15,10 @@ comments:
 <li>"<%= c.comment %>" - <%= c.user.username %></li>
 <% end %>
 
-
+<% if user_logged_in? %>
 <br>
-<%= link_to "add comment", new_comment_path(@field_recording) %> 
+<%= link_to "add comment", new_comment_path(@field_recording) %>
+<% end %> 
 </div>
 
 <div class="player">
