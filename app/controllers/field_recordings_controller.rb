@@ -13,10 +13,12 @@ class FieldRecordingsController < ApplicationController
 
   def new
     @field_recording = FieldRecording.new
+    @location = Location.new
   end
-
+  
   def create
-    @field_recording = FieldRecording.create(field_recording_params)
+    @location = Location.find_or_create_by(name: params[:field_recording][:location][:name])
+    @field_recording = FieldRecording.create(field_recording_params.merge(artist_id:session[:artist_id],location_id:@location.id))
     if @field_recording.valid?
       @field_recording.save
       redirect_to @field_recording
@@ -42,4 +44,5 @@ class FieldRecordingsController < ApplicationController
   def field_recording_params
     params.require(:field_recording).permit(:title, :date, :description, :photos, :recording)
   end
+
 end
