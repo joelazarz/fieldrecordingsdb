@@ -31,6 +31,24 @@ body {
     font-decoration: none;
  }
 
+ .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-auto-rows: auto;
+    grid-gap: 1em;
+    margin-top: 6em;
+    margin-left: 4em;
+    margin-right: 4em;
+}
+
+
+
+
+
+
+
+
+
 
  /* top of every page nav bar  */
 .nav-bar-top {
@@ -81,7 +99,7 @@ body {
 }
 
 
-.f-container-row {
+/* .f-container-row {
     display: flex;
     flex-direction: row;
     font-family: 'Fira Code', monospace;
@@ -153,12 +171,12 @@ body {
 
  /* headers */
 
-h1 {
+/* h1 {
     font-family: 'Fira Code', monospace;
     font-size: 5em;
     margin-top: 9rem;
     color: rgb(17, 17, 17);
-}
+}  */
 
 
 
@@ -170,10 +188,22 @@ h1 {
 /* content */
 
 
-p {
+/* artist views styling */
+
+/* artist index */
+.artist-header {
     font-family: 'Fira Code', monospace;
-    font-size: 1.5em;
-    grid-row-start: 1;
+    color: rgb(17, 17, 17);
+    font-size: 7em;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    justify-self: center;
+}
+
+.artist-list {
+    color: rgb(17, 17, 17);
+    font-size: 3em;
+    grid-row-start: 2;
     grid-column-start: 2;
 }
 
