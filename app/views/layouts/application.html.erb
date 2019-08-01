@@ -12,25 +12,18 @@
 
   <body>
 
-    <div class="login">
-      <% if user_logged_in? || artist_logged_in? %>
-      <%= link_to "+Logout", logout_path, method: :delete %>
-      <% else %>
-      <%= link_to "+User Login", login_user_path %>
-      <%= link_to "+Artist Login", login_artist_path %>
-      <% end %>
-    </div>
-    
-    <div class="signup">
-        <%= link_to "+User Sign Up", user_signup_path %>
-        <%= link_to "+Artist Sign Up", artist_signup_path %>
-    </div>
-
-    
-    <div class="menu-bar">
-        <%= link_to "+Locations", locations_path %>
-        <%= link_to "+Artists", artists_path %>
-        <%= link_to "+Field Recordings", field_recordings_path %>
+    <div class="nav-bar-top">
+    <% if user_logged_in? || artist_logged_in? %>
+    <%= link_to "+Logout", logout_path, method: :delete %>
+    <% else %>
+    <%= link_to "+User Login", login_user_path %>
+    <%= link_to "+Artist Login", login_artist_path %>
+    <% end %>
+    <%= link_to "+User Sign Up", user_signup_path %>
+    <%= link_to "+Artist Sign Up", artist_signup_path %>
+    <%= link_to "+Locations", locations_path %>
+    <%= link_to "+Artists", artists_path %>
+    <%= link_to "+Field Recordings", field_recordings_path %>
     </div>
 
 
