@@ -1,11 +1,12 @@
-<div class="f-container-row">
-<div class="f-head">
+<div class="container">
+<div class="fr-header">
     Field recordings
 </div>
 
-<div class="f-list">
+<div class="fr-list">
+<%= link_to "New Field Recording", new_field_recording_path%> 
 <% if @field_recordings.blank? %>
-    <h4>There are no field recordings containing the term <%= params[:search]%>.</h4>
+<h4>There are no field recordings containing the term <%= params[:search]%>.</h4>
 <% end %>
 <ul>
 <% @field_recordings.each do |fieldrecording| %>
@@ -13,8 +14,6 @@
 <%=link_to fieldrecording.title, field_recording_path(fieldrecording) %>
 </li>
 <% end %>
-<br>
-<%= link_to "New Field Recording", new_field_recording_path%> 
 
 
 </div>

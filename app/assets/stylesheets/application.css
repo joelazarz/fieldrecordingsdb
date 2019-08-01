@@ -207,6 +207,214 @@ body {
     grid-column-start: 2;
 }
 
+/* artist show / edit */
+.artist-content {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-family: 'Fira Code', monospace;
+    color: rgb(17, 17, 17);
+    font-size: 1em;
+}
+
+.artist-content h3{
+    font-family: 'Fira Code', monospace;
+    color: darkgreen;
+    grid-auto-flow: column;
+}
+
+.artist-picture {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: auto;
+    font-family: 'Fira Code', monospace;
+}
+
+.artist-picture img {
+    width: 100%;
+    height: auto;
+}
+
+.new-artist-header {
+    font-family: 'Fira Code', monospace;
+    color: rgb(17, 17, 17);
+    font-size: 3em;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 1;
+    justify-self: center;
+}
+
+.artist-form {
+    font-family: 'Fira Code', monospace;
+    color: rgb(17, 17, 17);
+    font-size: 2em;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 2;
+    justify-self: center;
+}
+
+.artist-form input {
+    width: 40vw;
+    padding: 1em;
+}
+.artist-form textarea {
+    width: 40vw;
+    height: 20vh;
+}
+
+
+/* field recordings index */
+
+.fr-header {
+    font-family: 'Fira Code', monospace;
+    color: rgb(17, 17, 17);
+    font-size: 7em;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    justify-self: center;
+}
+
+.fr-list {
+    color: rgb(17, 17, 17);
+    font-size: 2em;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    justify-self: center;
+}
+
+
+
+/* field recordings show */
+
+.fr-content {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-family: 'Fira Code', monospace;
+    color: rgb(17, 17, 17);
+    font-size: 2em;
+}
+
+.fr-header {
+    font-family: 'Fira Code', monospace;
+    font-size: 7em;
+    color: darkgreen;
+    grid-auto-flow: column;
+}
+
+.fr-comments {
+    grid-row-start: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    font-family: 'Fira Code', monospace;
+    color: rgb(17, 17, 17);
+    font-size: 1em;
+}
+
+.fr-picture {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: auto;
+}
+
+.fr-picture img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* field recordings form */
+
+.artist-form {
+    font-family: 'Fira Code', monospace;
+    color: rgb(17, 17, 17);
+    font-size: 2em;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 2;
+    justify-self: center;
+}
+
+.fr-form input {
+    width: 40vw;
+    padding: 1em;
+}
+.fr-form textarea {
+    width: 40vw;
+    height: 20vh;
+}
+
+
+/* locations  */
+
+/* locations index */
+
+.location-list {
+    color: rgb(17, 17, 17);
+    font-size: 2em;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+/* locations show */
+
+.location-header {
+    font-family: 'Fira Code', monospace;
+    font-size: 7em;
+    color: darkgreen;
+    grid-auto-flow: column;
+}
+
+.location-list {
+    color: rgb(17, 17, 17);
+    font-size: 2em;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+
+
+
+
+/* user  */
+
+
+.user-header {
+    font-family: 'Fira Code', monospace;
+    font-size: 2em;
+    color: darkgreen;
+    grid-auto-flow: column;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    justify-self: center;
+}
+
+
+.user-form {
+    font-family: 'Fira Code', monospace;
+    color: rgb(17, 17, 17);
+    font-size: 2em;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 2;
+    justify-self: center;
+}
+
+.user-form input {
+    width: 40vw;
+    padding: 1em;
+}
+
+
+
+
 
 
 

@@ -49,4 +49,7 @@ Rails.application.routes.draw do
   post "/comments", to: "comments#create"
   patch "/comments/:id", to: "comments#update"
   delete "/comments/:id", to: "comments#destroy", as: "delete_comment"
+
+  #extra routes 
+  get "/", to: "sessions#new_user"
 end

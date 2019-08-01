@@ -1,17 +1,17 @@
-<div class="f-container-column">
+<div class="container">
 
-<div class="f-head">
+<div class="location-header">
     <%= @location.name %>
 </div>
 
 <div class="f-desc">
 <%= @location.description %>
 </div>
-</div>
 
-<div class="f-container-column">
 
-<div class="f-list">
+
+
+<div class="location-list">
 <ul>
 <% @field_recordings.each do |f| %>
 <li><%= link_to f.title + " - " + f.date.to_s, field_recording_path(f)%></li>

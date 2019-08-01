@@ -1,10 +1,10 @@
-<div class="f-container-row">
+<div class="container">
 
-<div class="f-head">
+<div class="fr-header">
     New Field Recording
 </div>
                 
-<div class="f-form">
+<div class="fr-form">
 
 <%= form_for @field_recording do |f| %>
 <%= f.label :title %><br>
@@ -22,7 +22,7 @@
 <%= f.label :description %><br>
 <%= f.text_area :description %><br><br>
 <%= f.label "Photo" %><br>
-<%= f.file_field :photos %><br><br>
+<%= f.file_field :avatar %><br><br>
 <%= f.label "Recording" %><br>
 <%= f.file_field :recording %><br><br>
 <%= f.submit "Submit" %><br>
