@@ -25,6 +25,13 @@ class ArtistsController < ApplicationController
 
   def update
     @artist = Artist.find(params[:id])
+    if @artist.valid?
+    @artist = Artist.update(artist_params)
+    redirect_to @artist
+    else
+    flash[:message] = @artist.errors.full_messages[0]
+    render :edit
+    end
   end
 
   def destroy

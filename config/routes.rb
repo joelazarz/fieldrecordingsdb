@@ -12,7 +12,10 @@ Rails.application.routes.draw do
   get "/artists", to: "artists#index", as: "artists"
   get "/artists/new", to: "artists#new", as: "artist_signup"
   get "/artists/:id", to: "artists#show", as: "artist"
+  get "/artists/:id/edit", to: "artists#edit", as: "edit_artist"
   post "/artists", to: "artists#create"
+  patch "/artists/:id", to: "artists#update"
+
 
   #follow routes
   put "/artists/:id", to: "follows#create", as: "create_follow"
