@@ -12,7 +12,7 @@
  }
 
  .container {
-
+    /* display: flex; */
 }
 
 
@@ -26,12 +26,18 @@
     display: flex; 
     position: fixed;
     margin-left: -1em;
-    margin-top: 0em;
+    margin-top: -0.6em;
     width: 100vw;
     filter: opacity(0.7);
     background-color: rgb(0, 124, 10);
     padding: 1em;
     justify-content: space-evenly;
+ }
+
+ .search {
+    font-family: 'Fira Code', monospace;
+    font-size: 1em;
+    color: white; 
  }
 
 
@@ -44,11 +50,12 @@
 
  .nav-bar-top :link {
     font-family: 'Fira Code', monospace;
-    font-size: 0.8em;
+    font-size: 1em;
+    color: white;
  }
 
  .nav-bar-top a:visited {
-    color: deepskyblue;
+    color: rgb(255, 253, 148);
  }
 
  .nav-bar-top a:hover {
@@ -65,7 +72,7 @@
  }
 
  :any-link:hover {
-    color: rgb(4, 134, 134);
+    color: rgb(255, 247, 202);
 }
 
 

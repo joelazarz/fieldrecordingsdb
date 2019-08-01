@@ -1,6 +1,9 @@
 <div class="container">
     
 <h1>Field Recordings</h1>
+<% if @field_recordings.blank? %>
+    <h4>There are no field recordings containing the term <%= params[:search]%>.</h4>
+<% end %>
 <ul>
 <% @field_recordings.each do |fieldrecording| %>
 <li>

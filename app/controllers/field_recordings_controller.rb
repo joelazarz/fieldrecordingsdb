@@ -1,6 +1,11 @@
 class FieldRecordingsController < ApplicationController
   def index
     @field_recordings = FieldRecording.all
+    if params[:search]
+      @field_recordings = FieldRecording.search(params[:search])
+    else
+      @field_recordings = FieldRecording.all
+    end
   end
 
   def show
