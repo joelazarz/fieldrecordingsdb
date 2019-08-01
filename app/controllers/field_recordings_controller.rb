@@ -20,7 +20,6 @@ class FieldRecordingsController < ApplicationController
     @location = Location.find_or_create_by(name:params[:field_recording][:location][:name])
     @field_recording = FieldRecording.create!(field_recording_params.merge(artist_id:session[:artist_id],location_id:@location.id))
     if @field_recording.valid?
-    @field_recording.save
     redirect_to @field_recording
     else
     flash[:message] = @field_recording.errors.full_messages[0]
