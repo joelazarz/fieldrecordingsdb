@@ -1,3 +1,5 @@
+<div class="container">
+
 <h1>Edit <%= @artist.name %></h1>
 <div class="list">
 <%=form_for @artist do |f|%>
@@ -7,4 +9,6 @@
 <%=f.text_area :description%>
 <%=f.submit "submit"%>
 <%end%>
+</div>
+
 </div>
