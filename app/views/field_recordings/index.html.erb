@@ -1,3 +1,5 @@
+<div class="container">
+    
 <h1>Field Recordings</h1>
 <ul>
 <% @field_recordings.each do |fieldrecording| %>
@@ -5,3 +7,5 @@
 <%=link_to fieldrecording.title, field_recording_path(fieldrecording) %>
 </li>
 <% end %>
+
+</div>
