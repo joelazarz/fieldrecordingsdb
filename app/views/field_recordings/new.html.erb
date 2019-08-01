@@ -1,24 +1,31 @@
-<div class="container">
-    
-<h1>New Field Recording</h1>
+<div class="f-container-row">
 
-<div class="form">
+<div class="f-head">
+    New Field Recording
+</div>
+                
+<div class="f-form">
+
 <%= form_for @field_recording do |f| %>
-<%= f.label :title %>
-<%= f.text_field :title %>
+<%= f.label :title %><br>
+<%= f.text_field :title %><br><br>
 <%= f.fields_for @location do |location| %>
-    <%= location.label :name, "Location" %>
-    <%= location.text_field :name %>
+    <%= location.label :name, "Location" %><br>
+    <%= location.text_field :name %><br><br>
 <%end%>
-<%= f.label :date %>
-<%= f.date_select :date %>
-<%= f.label :description %>
-<%= f.text_area :description %>
-<%= f.label "Photo" %>
-<%= f.file_field :photos %>
-<%= f.label "Recording" %>
-<%= f.file_field :recording %>
-<%= f.submit "Submit" %>
+<%= f.fields_for @artist do |artist| %>
+    <%= artist.label :name, "Artist" %><br>
+    <%= artist.text_field :name %><br><br>
+<%end%>
+<%= f.label :date %><br>
+<%= f.date_select :date %><br><br>
+<%= f.label :description %><br>
+<%= f.text_area :description %><br><br>
+<%= f.label "Photo" %><br>
+<%= f.file_field :photos %><br><br>
+<%= f.label "Recording" %><br>
+<%= f.file_field :recording %><br><br>
+<%= f.submit "Submit" %><br>
 <% end %>
 </div>
 

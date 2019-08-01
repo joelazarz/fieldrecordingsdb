@@ -1,5 +1,4 @@
 class ArtistsController < ApplicationController
-
   def index
     @artists = Artist.all
   end
@@ -26,11 +25,11 @@ class ArtistsController < ApplicationController
   def update
     @artist = Artist.find(params[:id])
     if @artist.valid?
-    @artist = Artist.update(artist_params)
-    redirect_to @artist
+      @artist.update(artist_params)
+      redirect_to artist_path(@artist)
     else
-    flash[:message] = @artist.errors.full_messages[0]
-    render :edit
+      flash[:message] = @artist.errors.full_messages[0]
+      render :edit
     end
   end
 
@@ -40,7 +39,6 @@ class ArtistsController < ApplicationController
   private
 
   def artist_params
-    params.require(:artist).permit(:name, :username, :password, :email, :description, :avatar)
+    params.require(:artist).permit(:name, :description, :avatar)
   end
-  
 end

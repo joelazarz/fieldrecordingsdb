@@ -1,8 +1,13 @@
-<div class="container">
+<div class="f-container-column">
 
-<h1><%= @user.username %></h1>
-<div class="list">
-Artists you follow
+<div class="f-head"><%= @user.username %></div>
+
+</div>
+
+<div class="f-container-column">
+
+<div class="f-list">
+    Artists you follow
 <ul>
 <% @follows.each do |f| %>
 <li> <%= link_to f.artist.name, artist_path(f.artist_id) %> </li>
@@ -10,7 +15,7 @@ Artists you follow
 </ul>
 </div>
 
-<div class="list">
+<div class="f-comment">
 Comments on Field Recordings
 <ul>
 <% @comments.each do |c| %>

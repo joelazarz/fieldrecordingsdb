@@ -18,17 +18,19 @@ class FieldRecordingsController < ApplicationController
 
   def new
     @field_recording = FieldRecording.new
+    @artist = Artist.new
     @location = Location.new
   end
-  
+
   def create
-    @location = Location.find_or_create_by(name:params[:field_recording][:location][:name])
-    @field_recording = FieldRecording.create!(field_recording_params.merge(artist_id:session[:artist_id],location_id:@location.id))
+    @location = Location.find_or_create_by(name: params[:field_recording][:location][:name])
+    @artist = Artist.find_or_create_by(name: params[:field_recording][:artist][:name])
+    @field_recording = FieldRecording.create!(field_recording_params.merge(artist_id: @artist.id, location_id: @location.id))
     if @field_recording.valid?
-    redirect_to @field_recording
+      redirect_to @field_recording
     else
-    flash[:message] = @field_recording.errors.full_messages[0]
-    render :new
+      flash[:message] = @field_recording.errors.full_messages[0]
+      render :new
     end
   end
 
@@ -36,16 +38,17 @@ class FieldRecordingsController < ApplicationController
     @field_recording = FieldRecording.find(params[:id])
     @location = Location.new
   end
-  
+
   def update
-    @location = Location.find_or_create_by(name:params[:field_recording][:location][:name])
+    @location = Location.find_or_create_by(name: params[:field_recording][:location][:name])
+    @artist = Artist.find_or_create_by(name: params[:field_recording][:artist][:name])
     @field_recording = FieldRecording.find(params[:id])
     if @field_recording.valid?
-    @field_recording.update(field_recording_params)
-    redirect_to @field_recording
-    else 
-    flash[:message] = @field_recording.errors.full_messages[0]
-    render :edit
+      @field_recording.update(field_recording_params)
+      redirect_to @field_recording
+    else
+      flash[:message] = @field_recording.errors.full_messages[0]
+      render :edit
     end
   end
 
@@ -57,5 +60,4 @@ class FieldRecordingsController < ApplicationController
   def field_recording_params
     params.require(:field_recording).permit(:title, :date, :description, :photos, :recording)
   end
-
 end

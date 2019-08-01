@@ -1,28 +1,39 @@
 
  /* body and view(s) page container */
  
- body {
-    display: grid;
-    padding: 0.1rem;
+
+ a:link {
+    text-decoration: none;
+  }
+  
+  a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  a:active {
+    text-decoration: none;
+  }
+
+
+
+body {
+    display: flex;
+    /* padding: 0.1rem;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
     width: 98%;
-    height: 100% ;
+    height: 100% ; */
     -webkit-animation: fadein 1.5s;
+    font-decoration: none;
  }
-
- .container {
-    /* display: flex; */
-}
-
-
-
-
 
 
  /* top of every page nav bar  */
-
- .nav-bar-top {
+.nav-bar-top {
     display: flex; 
     position: fixed;
     margin-left: -1em;
@@ -32,55 +43,113 @@
     background-color: rgb(0, 124, 10);
     padding: 1em;
     justify-content: space-evenly;
- }
+}
 
  .search {
     font-family: 'Fira Code', monospace;
     font-size: 1em;
     color: white; 
- }
-
-
-
-
-
-
+}
 
  /* links  */
 
- .nav-bar-top :link {
+.nav-bar-top :link {
     font-family: 'Fira Code', monospace;
     font-size: 1em;
     color: white;
- }
+}
 
- .nav-bar-top a:visited {
+.nav-bar-top a:visited {
     color: rgb(255, 253, 148);
- }
+}
 
- .nav-bar-top a:hover {
+.nav-bar-top a:hover {
     color: deepskyblue;
- }
+}
 
  .nav-bar-top a:active {
     color: deepskyblue;
- }
+}
  
- .container :any-link {
+.container :any-link {
      font-family: 'Fira Code', monospace;
      text-decoration: none;
- }
+}
 
- :any-link:hover {
-    color: rgb(255, 247, 202);
+:any-link:hover {
+    color: rgb(5, 30, 172);
+}
+
+
+.f-container-row {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Fira Code', monospace;
+    text-decoration: none;
+    margin-top: 48px;
+    justify-content: space-between
+}
+
+.f-container-column {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Fira Code', monospace;
+    text-decoration: none;
+    margin-top: 48px;
+    width: 500px;
+}
+
+.f-container :any-link {
+    font-family: 'Fira Code', monospace;
+    text-decoration: none;
+}
+
+.f-head {
+    order: 1;
+    font-size: 5em;
+    width: 450px;
+    margin-right: 1em;
+}
+
+.f-follow {
+    order: 2;
+    width: 400px;
+    margin-top: 20px;
+}
+.f-desc {
+    order: 3;
+    width: 400px;
+    margin-top: 20px;
+}
+
+.f-img {
+    order: 4;
+}
+
+.f-list {
+    order: 5;
+    margin-top: 2.5em;
+    margin-right: 2em;
+    font-size: 1.5em;
+}
+
+.f-comment {
+    order: 6;
+    margin-top: 4em;
+    font-size: 1em;
 }
 
 
 
+.f-form {
+    order: 7;
+    margin-top: 2.5em;
 
+}
 
-
-
+.f-player{
+    order: 99;
+}
 
  /* headers */
 

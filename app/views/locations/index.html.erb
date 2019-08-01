@@ -1,8 +1,10 @@
-<div class="container">
+<div class="f-container-row">
 
-<h1>Locations</h1>
+<div class="f-head">
+    Locations
+</div>
 
-<div class="list">
+<div class="f-list">
 <% @locations.each do |location| %>
 <li>
 <%=link_to location.name, location_path(location.id) %>

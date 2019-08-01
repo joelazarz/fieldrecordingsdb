@@ -1,8 +1,8 @@
-<div class="container">
+<div class="f-container-row">
 
-<h1>Field Recordings</h1>
+<div class="f-head">Field Recordings</div>
 
-<div class="list">
+<div class="f-list">
 title: <%= @field_recording.title %><br>
 artist: <%= link_to @artist.name, artist_path(@artist) %><br>
 location: <%= link_to @location.name, location_path(@location) %><br>
@@ -10,7 +10,7 @@ date: <%= @field_recording.date %><br>
 description: <%= @field_recording.description %><br>
 </div>
 <br>
-<div class="list">
+<div class="f-comment">
 comments:
 
 <% @comments.each do |c| %>

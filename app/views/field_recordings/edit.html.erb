@@ -10,6 +10,10 @@
     <%= location.label :name, "Location" %>
     <%= location.text_field :name, placeholder: "Leave blank if Location is the same." %>
     <% end %>
+    <%= f.fields_for @artist do |artist| %>
+    <%= artist.label :name, "Artist" %>
+    <%= artist.text_field :name, placeholder: "Leave blank if Artist is the same." %>
+    <% end %>
 <%= f.label :date %>
 <%= f.date_select :date %>
 <%= f.label :description %>

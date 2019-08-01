@@ -1,30 +1,37 @@
-<div class="container">
+<div class="f-container-column">
 
-<h1><%= @artist.name %></h1>
+<div class="f-head">
+    <%= @artist.name %>
+</div>
 
-<div id="follow-button">
-<% if user_logged_in? %>
-<% if !followed? %>
-<h3><%= link_to "follow", create_follow_path, method: :put %></h3>
-<% else %>
-<h3><%= link_to "unfollow", delete_follow_path, method: :delete %></h3>
-<% end %>
-<% end %>
+<div class="f-follow">
+    <% if user_logged_in? %>
+        <% if !followed? %>
+            <%= link_to "follow", create_follow_path, method: :put %>
+        <% else %>
+            <%= link_to "unfollow", delete_follow_path, method: :delete %>
+        <% end %>
+    <% end %>
 </div>
 
 
-<p><%= @artist.description %></p>
-
-<div class="list">
-<ul><% @field_recordings.each do |f|%>
-<li><%= link_to f.title + " " + f.date.to_s, field_recording_path(f.id)%></li>
-<% end %></ul>
+<div class="f-desc">
+    <%= @artist.description %>
 </div>
 
-<div class="photo">
-<% if @artist.avatar.attached? %>
-    <img src="<%= (url_for(@artist.avatar)) %>">
-<% end %>
+
+<div class="f-img">
+    <% if @artist.avatar.attached? %>
+    <img src="<%= (url_for(@artist.avatar)) %>", width = "200">
+    <% end %>
 </div>
 
+</div>
+    
+<div class="f-container-column">
+<div class="f-list">
+    <ul><% @field_recordings.each do |f|%>
+    <li><%= link_to f.title + " " + f.date.to_s, field_recording_path(f.id)%></li>
+    <% end %></ul>
+    </div>
 </div>
