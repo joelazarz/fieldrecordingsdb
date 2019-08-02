@@ -55,10 +55,12 @@ class FieldRecordingsController < ApplicationController
 
   def destroy
   end
-
+  
+  
   private
-
+  
   def field_recording_params
     params.require(:field_recording).permit(:title, :date, :description, :avatar, :recording)
   end
+
 end

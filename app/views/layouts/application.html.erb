@@ -15,21 +15,21 @@
     <div class="nav-bar-top">
     <div class="sign-up">
 
-  <%  if user_logged_in?%>
+    <%  if user_logged_in?%>
     <%= link_to "+User Sign Up", user_signup_path %>
-  <% end %>
+    <% end %>
+    </div>
 
-  </div>
     <div class="navigation">
     <%= link_to "+Locations", locations_path %>
     <%= link_to "+Artists", artists_path %>
     <%= link_to "+Field Recordings", field_recordings_path %>
     </div>
     <div class="search">
-        <%= form_tag(field_recordings_path, :method => "get", id: "search-form") do %>
-        <%= text_field_tag :search, params[:search], placeholder: "Search" %>
-        <%= submit_tag "Search", :name => nil %>
-        <% end %>
+    <%= form_tag(field_recordings_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search" %>
+    <%= submit_tag "Search", :name => nil %>
+    <% end %>
     </div>
     <div class="login-logout">
     <% if user_logged_in?%>
@@ -37,6 +37,7 @@
     <% else %>
     <%= link_to "+User Login", login_user_path %>
     <% end %>
+    </div>
     </div>
     </div>
 

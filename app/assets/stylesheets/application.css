@@ -64,6 +64,7 @@ body {
     color: white; 
 }
 
+
  /* links  */
 
 .nav-bar-top :link {
@@ -222,7 +223,7 @@ body {
 .fr-comments {
     grid-row-start: 2;
     grid-column-start: 3;
-    grid-column-end: 4;
+    grid-column-end: 5;
     font-family: 'Fira Code', monospace;
     color: rgb(17, 17, 17);
     font-size: 1em;
@@ -236,7 +237,7 @@ body {
     margin-bottom: 3em;
 }
 
-.fr-picture img {
+.fr-comments img {
     width: 100%;
     height: auto;
 }

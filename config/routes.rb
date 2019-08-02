@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   #field recording routes
   get "/fieldrecordings", to: "field_recordings#index", as: "field_recordings"
   get "/fieldrecordings/new", to: "field_recordings#new", as: "new_field_recording"
+
   get "/fieldrecordings/:id", to: "field_recordings#show", as: "field_recording"
   get "/fieldrecordings/:id/edit", to: "field_recordings#edit", as: "edit_field_recording"
   post "/fieldrecordings", to: "field_recordings#create"

@@ -12,7 +12,12 @@ date: <%= @field_recording.date %><br>
 description: <%= @field_recording.description %><br>
 </div>
 
+
+
 <div class="fr-comments">
+<% if @field_recording.avatar.attached? %>
+<img src="<%= (url_for(@field_recording.avatar)) %>">
+<% end %>
 comments:
 <% @comments.each do |c| %>
 <li>"<%= c.comment %>" - <%= c.user.username %></li>
@@ -24,17 +29,10 @@ comments:
 </div>
 
 
-<div class="fr-picture">        
-    <% if @field_recording.avatar.attached? %>
-    <img src="<%= (url_for(@field_recording.avatar)) %>">
-    <% end %>
-</div>
-</div>
 
-<div class="fr-space">
-    
-</div>
 
+</div>
+<div class="fr-space"></div>
 <div class="player">
     <audio controls><source src="<%= (url_for(@field_recording.recording)) %>"></audio> 
 </div>
