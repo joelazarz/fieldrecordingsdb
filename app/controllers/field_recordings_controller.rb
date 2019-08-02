@@ -7,6 +7,11 @@ class FieldRecordingsController < ApplicationController
       @field_recordings = FieldRecording.search(params[:search])
     else
       @field_recordings = FieldRecording.all
+      @random_field_recording = @field_recordings.sample
+      @title = @random_field_recording.title
+      @artist = Artist.find { |a| a.id == @random_field_recording.artist_id }
+      @location = Location.find { |l| l.id == @random_field_recording.location_id }
+      @description = @random_field_recording.description
     end
   end
 

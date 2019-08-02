@@ -13,7 +13,24 @@ Artists
 </ul>
 </div>
 
+<div class="fr-comments">
 
+        Featured Artist<br>
+        <br>
+        <% if @random_artist.avatar.attached? %>
+        <img src="<%= (url_for(@random_artist.avatar)) %>"">
+        <% end %>
+        name: <%= link_to @random_artist.name, artist_path(@random_artist) %><br>
+        recordings: <% @recordings.each do |r| %>
+                    <%= link_to r.title, field_recording_path(r) %><br>   
+                    <% end %>
+                    
+    
+    
+    </div>
+        
+        
+        
 
 
 </div>

@@ -4,11 +4,16 @@ class LocationsController < ApplicationController
   def index
     @locations = Location.all
     @locations = @locations.sort_by { |l| l.name.downcase }
+    @random_location = @locations.sample
+    @recordings = @random_location.field_recordings
+
+
   end
 
   def show
     @location = Location.find(params[:id])
     @field_recordings = @location.field_recordings
+    
   end
 
   def new

@@ -14,4 +14,18 @@
 </ul>
 </div>
 
+<div class="ft-location">
+
+Featured Location<br>
+<br>
+location: <%= link_to @random_location.name, location_path(@random_location) %><br>
+recordings: <% @recordings.each do |r| %>
+            <%= link_to r.title, field_recording_path(r) %><br>   
+            <% end %>
+                    
+    
+    
+</div>
+     
+
 </div>

@@ -3,6 +3,9 @@ class ArtistsController < ApplicationController
 
   def index
     @artists = Artist.all
+    @random_artist = @artists.sample
+    @recordings = @random_artist.field_recordings
+
   end
 
   def show

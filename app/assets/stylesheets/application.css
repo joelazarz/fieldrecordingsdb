@@ -229,6 +229,7 @@ body {
     grid-column-start: 3;
     grid-column-end: 5;
     padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 .new-fr a {
@@ -325,6 +326,16 @@ body {
     font-size: 2em;
     grid-row-start: 2;
     grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+.ft-location {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.5em;
+    padding-top: 2em;
+    padding-left: 4em;
+    grid-row-start: 2;
+    grid-column-start: 3;
     grid-column-end: 5;
 }
 
