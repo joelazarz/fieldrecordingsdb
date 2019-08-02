@@ -10,8 +10,12 @@
 <div class="user-follows">
     Artists you follow
     <ul>
+        <% if @follows.length == 0  %>
+        <%= link_to "+ no follows yet; find an artist", artists_path %>
+        <% else %>
         <% @follows.each do |f| %>
         <li> <%= link_to f.artist.name, artist_path(f.artist_id) %> </li>
+        <% end %>
         <% end %>
     </ul>
 </div>
@@ -19,12 +23,16 @@
 <div class="user-comments">
     Comments on Field Recordings
     <ul>
+        <% if @comments.length == 0 %>
+        <%= link_to "+ no comments yet; find a field recording", field_recordings_path %>
+        <% else %>
         <% @comments.each do |c| %>
         <li> <%= link_to c.field_recording.title + " - " + c.comment, field_recording_path(c.field_recording) %>
             <%= link_to "edit comment", edit_comment_path(c.id) %>
             <%= link_to "delete comment", c, method: :delete , data: {:confirm => "Delete comment?" } ,
             :title => "Delete #{c.comment}"%>
         </li>
+        <% end %>
         <% end %>
     </ul>
 </div>
