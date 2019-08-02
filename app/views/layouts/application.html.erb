@@ -33,6 +33,7 @@
     </div>
     <div class="login-logout">
     <% if user_logged_in?%>
+    <%=  %>
     <%= link_to "+Logout", logout_path, method: :delete %>
     <% else %>
     <%= link_to "+User Login", login_user_path %>
