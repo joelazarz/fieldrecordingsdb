@@ -1,4 +1,6 @@
 class ArtistsController < ApplicationController
+  impressionist actions: [:show]
+
   def index
     @artists = Artist.all
   end

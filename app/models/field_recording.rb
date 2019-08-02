@@ -8,8 +8,9 @@ class FieldRecording < ApplicationRecord
   validates :title, presence: true
   accepts_nested_attributes_for :location
 
+  is_impressionable
+
   def self.search(search)
     where("title LIKE ? OR description LIKE ?", "%#{search}%", "%#{search}%")
   end
-
 end

@@ -1,7 +1,7 @@
 <div class="container">
 
 <div class="fr-header">
-Analysis
+Site stats
 </div>
         
         
@@ -11,7 +11,28 @@ number of users: <%= @users.length %><br>
 number of field recordings: <%= @field_recordings.length %><br>
 number of artists: <%= @artists.length %><br>
 number of locations: <%= @locations.length %><br>
-number of comments: <%= @comments.length %>
+number of comments: <%= @comments.length %><br>
+
+
+<br>
+<br>
+Field Recording views<br>
+<% @field_recordings.each do |f| %>
+<%=  "#{f.title}: #{f.impressionist_count}" %><br>
+<% end %>
+<br>
+Artist views<br>
+<% @artists.each do |a| %>
+<%=  "#{a.name}: #{a.impressionist_count}" %><br>
+<% end %>
+<br>
+Location views<br>
+<% @locations.each do |l| %>
+<%=  "#{l.name}: #{l.impressionist_count}" %><br>
+<% end %>
+<br>
+
+
 </ul>
 </div>
 </div>
