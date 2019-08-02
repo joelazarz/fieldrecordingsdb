@@ -17,7 +17,6 @@ Rails.application.routes.draw do
   post "/artists", to: "artists#create"
   patch "/artists/:id", to: "artists#update"
 
-
   #follow routes
   put "/artists/:id", to: "follows#create", as: "create_follow"
   delete "/artists/:id", to: "follows#destroy", as: "delete_follow"
@@ -32,6 +31,7 @@ Rails.application.routes.draw do
 
   #user routes
   get "/users", to: "users#index", as: "users"
+  get "/users/analysis", to: "users#analysis"
   get "/users/:id", to: "users#show", as: "user"
   get "/signup", to: "users#new", as: "user_signup"
   post "/users", to: "users#create"
@@ -51,6 +51,6 @@ Rails.application.routes.draw do
   patch "/comments/:id", to: "comments#update"
   delete "/comments/:id", to: "comments#destroy", as: "delete_comment"
 
-  #extra routes 
+  #extra routes
   get "/", to: "sessions#new_user"
 end

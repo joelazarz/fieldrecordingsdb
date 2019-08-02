@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   def index
   end
 
@@ -30,10 +29,17 @@ class UsersController < ApplicationController
   def destroy
   end
 
+  def analysis
+    @users = User.all
+    @field_recordings = FieldRecording.all
+    @artists = Artist.all
+    @locations = Location.all
+    @comments = Comment.all
+  end
+
   private
 
   def user_params
     params.require(:user).permit(:username, :password, :email)
   end
-  
 end
