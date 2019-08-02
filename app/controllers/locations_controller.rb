@@ -1,4 +1,6 @@
 class LocationsController < ApplicationController
+  impressionist actions: [:show]
+
   def index
     @locations = Location.all
     @locations = @locations.sort_by { |l| l.name.downcase }

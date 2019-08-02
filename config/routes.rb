@@ -31,7 +31,7 @@ Rails.application.routes.draw do
 
   #user routes
   get "/users", to: "users#index", as: "users"
-  get "/users/analysis", to: "users#analysis"
+  get "/users/analysis", to: "users#analysis", as: "stats"
   get "/users/:id", to: "users#show", as: "user"
   get "/signup", to: "users#new", as: "user_signup"
   post "/users", to: "users#create"
