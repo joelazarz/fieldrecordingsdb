@@ -206,6 +206,7 @@ body {
 
 .fr-list {
     color: rgb(17, 17, 17);
+    font-family: 'Fira Code', monospace;
     font-size: 2em;
     grid-row-start: 2;
     grid-column-start: 1;

@@ -8,9 +8,8 @@
 <% if user_logged_in?%> 
 <%= link_to "New Field Recording", new_field_recording_path%> 
 <% end %>
-
 <% if @field_recordings.blank? %>
-<h4>There are no field recordings containing the term <%= params[:search]%>.</h4>
+There are no field recordings containing the term <%= params[:search]%>.
 <% end %>
 <ul>
 <% @field_recordings.each do |fieldrecording| %>
