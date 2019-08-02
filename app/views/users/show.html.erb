@@ -25,6 +25,13 @@
 </div>
 
 <div class="user-comments">
+ <div class="new-fr">
+<% if user_logged_in?%> 
+<%= link_to "New Field Recording", new_field_recording_path%> 
+<% end %>
+<br>
+<br>
+</div>
     Comments on Field Recordings
     <ul>
         <% if @comments.length == 0 %>
@@ -32,6 +39,8 @@
         <% else %>
         <% @comments.each do |c| %>
         <li> <%= link_to c.field_recording.title + " - " + c.comment, field_recording_path(c.field_recording) %>
+            <br>
+
             <%= link_to "edit comment", edit_comment_path(c.id) %>
             <%= link_to "delete comment", c, method: :delete , data: {:confirm => "Delete comment?" } ,
             :title => "Delete #{c.comment}"%>

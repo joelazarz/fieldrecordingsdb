@@ -3,11 +3,13 @@
     Field recordings
 </div>
 
-<div class="fr-list">
-
+<div class="new-fr">
 <% if user_logged_in?%> 
 <%= link_to "New Field Recording", new_field_recording_path%> 
 <% end %>
+</div>
+
+<div class="fr-list">
 <% if @field_recordings.blank? %>
 There are no field recordings containing the term <%= params[:search]%>.
 <% end %>
@@ -17,8 +19,6 @@ There are no field recordings containing the term <%= params[:search]%>.
 <%=link_to fieldrecording.title, field_recording_path(fieldrecording) %>
 </li>
 <% end %>
-
-
 </div>
 
 </div>
