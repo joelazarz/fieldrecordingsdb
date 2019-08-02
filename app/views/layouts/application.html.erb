@@ -15,7 +15,7 @@
     <div class="nav-bar-top">
     <div class="sign-up">
 
-    <%  if user_logged_in?%>
+    <%  if !user_logged_in?%>
     <%= link_to "+User Sign Up", user_signup_path %>
     <% end %>
     </div>
@@ -33,7 +33,7 @@
     </div>
     <div class="login-logout">
     <% if user_logged_in?%>
-    <%=  %>
+    <%= link_to "+My Profile", user_path(session[:user_id]) %>
     <%= link_to "+Logout", logout_path, method: :delete %>
     <% else %>
     <%= link_to "+User Login", login_user_path %>

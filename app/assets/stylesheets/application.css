@@ -63,6 +63,11 @@ body {
     color: white; 
 }
 
+.search input#search {
+    padding: 0.5em;
+    width: 25em;
+}
+
 
  /* links  */
 
@@ -70,6 +75,7 @@ body {
     font-family: 'Fira Code', monospace;
     font-size: 1em;
     color: white;
+    padding-right: 1.4em;
 }
 
 .nav-bar-top a:visited {
