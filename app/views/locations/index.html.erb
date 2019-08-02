@@ -1,15 +1,17 @@
 <div class="container">
 
-<div class="location-header">
+<div class="fr-header">
     Locations
 </div>
 
-<div class="location-list">
+<div class="fr-list">
+<ul>
 <% @locations.each do |location| %>
 <li>
 <%=link_to location.name, location_path(location.id) %>
 </li>
 <% end %>
+</ul>
 </div>
 
 </div>
