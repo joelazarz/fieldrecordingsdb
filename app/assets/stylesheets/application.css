@@ -22,13 +22,8 @@
 
 body {
     display: flex;
-    /* padding: 0.1rem;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(2, 1fr);
-    width: 98%;
-    height: 100% ; */
-    -webkit-animation: fadein 1.5s;
-    font-decoration: none;
+    text-decoration: none;
+    -webkit-animation: fadein 0.5s;
  }
 
  .container {
@@ -99,90 +94,6 @@ body {
 }
 
 
-/* .f-container-row {
-    display: flex;
-    flex-direction: row;
-    font-family: 'Fira Code', monospace;
-    text-decoration: none;
-    margin-top: 48px;
-    justify-content: space-between
-}
-
-.f-container-column {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Fira Code', monospace;
-    text-decoration: none;
-    margin-top: 48px;
-    width: 500px;
-}
-
-.f-container :any-link {
-    font-family: 'Fira Code', monospace;
-    text-decoration: none;
-}
-
-.f-head {
-    order: 1;
-    font-size: 5em;
-    width: 450px;
-    margin-right: 1em;
-}
-
-.f-follow {
-    order: 2;
-    width: 400px;
-    margin-top: 20px;
-}
-.f-desc {
-    order: 3;
-    width: 400px;
-    margin-top: 20px;
-}
-
-.f-img {
-    order: 4;
-}
-
-.f-list {
-    order: 5;
-    margin-top: 2.5em;
-    margin-right: 2em;
-    font-size: 1.5em;
-}
-
-.f-comment {
-    order: 6;
-    margin-top: 4em;
-    font-size: 1em;
-}
-
-
-
-.f-form {
-    order: 7;
-    margin-top: 2.5em;
-
-}
-
-.f-player{
-    order: 99;
-}
-
- /* headers */
-
-/* h1 {
-    font-family: 'Fira Code', monospace;
-    font-size: 5em;
-    margin-top: 9rem;
-    color: rgb(17, 17, 17);
-}  */
-
-
-
-
-
-
 
 
 /* content */
@@ -202,6 +113,7 @@ body {
 
 .artist-list {
     color: rgb(17, 17, 17);
+    font-family: 'Fira Code', monospace;
     font-size: 3em;
     grid-row-start: 2;
     grid-column-start: 2;
@@ -297,6 +209,7 @@ body {
     font-family: 'Fira Code', monospace;
     color: rgb(17, 17, 17);
     font-size: 2em;
+    margin-bottom: 3em;
 }
 
 .fr-header {
@@ -320,6 +233,7 @@ body {
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: auto;
+    margin-bottom: 3em;
 }
 
 .fr-picture img {
@@ -396,6 +310,20 @@ body {
     justify-self: center;
 }
 
+.user-follows {
+    font-family: 'Fira Code', monospace;
+    font-size: 2em;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.user-comments {
+    font-family: 'Fira Code', monospace;
+    font-size: 2em;
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
 
 .user-form {
     font-family: 'Fira Code', monospace;
@@ -410,6 +338,28 @@ body {
 .user-form input {
     width: 40vw;
     padding: 1em;
+}
+
+.comment-form {
+    margin-top: 4em;
+    font-family: 'Fira Code', monospace;
+    max-width: 100vw;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+}
+
+
+textarea#comment_comment {
+    width: 40vw;
+    height: 30vh;;
+    padding: 1em;
+}
+
+.recording-title {
+    font-family: 'Fira Code', monospace;
+    font-size: 3em;
+    color: darkgreen;
 }
 
 

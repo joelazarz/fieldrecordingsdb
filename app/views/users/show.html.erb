@@ -1,31 +1,32 @@
-<div class="f-container-column">
+<div class="container">
 
-<div class="f-head"><%= @user.username %></div>
-
+<div class="fr-header">
+<%= @user.username %>
 </div>
 
-<div class="f-container-column">
 
-<div class="f-list">
+
+
+<div class="user-follows">
     Artists you follow
-<ul>
-<% @follows.each do |f| %>
-<li> <%= link_to f.artist.name, artist_path(f.artist_id) %> </li>
-<% end %>
-</ul>
+    <ul>
+        <% @follows.each do |f| %>
+        <li> <%= link_to f.artist.name, artist_path(f.artist_id) %> </li>
+        <% end %>
+    </ul>
 </div>
 
-<div class="f-comment">
-Comments on Field Recordings
-<ul>
-<% @comments.each do |c| %>
-<li> <%= link_to c.field_recording.title + " - " + c.comment, field_recording_path(c.field_recording) %>
-<%= link_to "edit comment", edit_comment_path(c.id) %>
-<%= link_to "delete comment", c, method: :delete , data: {:confirm => "Delete comment?" } ,
-:title => "Delete #{c.comment}"%>
-</li>
-<% end %>
-</ul>
+<div class="user-comments">
+    Comments on Field Recordings
+    <ul>
+        <% @comments.each do |c| %>
+        <li> <%= link_to c.field_recording.title + " - " + c.comment, field_recording_path(c.field_recording) %>
+            <%= link_to "edit comment", edit_comment_path(c.id) %>
+            <%= link_to "delete comment", c, method: :delete , data: {:confirm => "Delete comment?" } ,
+            :title => "Delete #{c.comment}"%>
+        </li>
+        <% end %>
+    </ul>
 </div>
 
 

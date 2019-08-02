@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
     helper_method :user_logged_in?
-    helper_method :artist_logged_in?
+    # helper_method :artist_logged_in?
     helper_method :followed?
     
     def current_user

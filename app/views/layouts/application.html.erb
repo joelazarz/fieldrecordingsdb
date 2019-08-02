@@ -15,7 +15,7 @@
     <div class="nav-bar-top">
     <div class="sign-up">
 
-      <%  if !user_logged_in?%>
+  <%  if user_logged_in?%>
     <%= link_to "+User Sign Up", user_signup_path %>
   <% end %>
 
