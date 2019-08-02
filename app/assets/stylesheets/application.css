@@ -52,7 +52,6 @@ body {
     margin-left: -1em;
     margin-top: -0.6em;
     width: 100vw;
-    filter: opacity(0.7);
     background-color: rgb(0, 124, 10);
     padding: 1em;
     justify-content: space-evenly;
