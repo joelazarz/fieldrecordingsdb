@@ -23,7 +23,7 @@
 body {
     display: flex;
     text-decoration: none;
-    -webkit-animation: fadein 0.5s;
+    -webkit-animation: fadein 1s;
  }
 
  .container {
@@ -246,6 +246,7 @@ body {
     font-family: 'Fira Code', monospace;
     color: rgb(17, 17, 17);
     font-size: 1em;
+    padding-bottom: 3em;
 }
 
 .fr-picture {
@@ -275,6 +276,9 @@ body {
     justify-self: center;
 }
 
+.fr-form {
+    font-family: 'Fira Code', monospace;
+}
 .fr-form input {
     width: 40vw;
     padding: 1em;

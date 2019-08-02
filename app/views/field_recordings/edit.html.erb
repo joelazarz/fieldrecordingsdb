@@ -1,8 +1,9 @@
 <div class="container">
 
-<h1>Edit <%= @field_recording.title %></h1>
-
-<div class="form">
+<div class="fr-header">
+Edit <%= @field_recording.title %>
+</div>
+<div class="fr-form">
 <%= form_for @field_recording do |f| %>
 <%= f.label :title %>
 <%= f.text_field :title %>

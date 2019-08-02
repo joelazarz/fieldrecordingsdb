@@ -20,14 +20,23 @@ description: <%= @field_recording.description %><br>
 <% if @field_recording.avatar.attached? %>
 <img src="<%= (url_for(@field_recording.avatar)) %>">
 <% end %>
+<% if user_logged_in? %>
+<%= link_to " +edit ", edit_field_recording_path(@field_recording) %><br><br>
+
+<% end %>
 comments:
 <% @comments.each do |c| %>
 <li>"<%= c.comment %>" - <%= c.user.username %></li>
 <% end %>
 <% if user_logged_in? %>
 <br>
+<br>
 <%= link_to "add comment", new_comment_path(@field_recording) %>
 <% end %> 
+<br>
+<br>
+<br>
+<br>
 </div>
 
 
