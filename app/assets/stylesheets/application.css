@@ -219,6 +219,12 @@ body {
     grid-auto-flow: column;
 }
 
+.fr-description {
+    margin-top: 0.5em;
+    color: rgb(0, 151, 50);
+    font-size: 0.8em;
+}
+
 .fr-comments {
     grid-row-start: 2;
     grid-column-start: 3;
