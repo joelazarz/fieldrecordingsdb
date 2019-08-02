@@ -213,6 +213,15 @@ body {
     grid-column-end: 5;
 }
 
+.fr-stats {
+    color: rgb(17, 17, 17);
+    font-family: 'Fira Code', monospace;
+    font-size: 1em;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
 
 /* field recordings show */
 
@@ -324,6 +333,11 @@ body {
 
 /* user  */
 
+
+.stat-link {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.6em;
+}
 
 .user-header {
     font-family: 'Fira Code', monospace;

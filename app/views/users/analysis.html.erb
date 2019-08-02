@@ -5,7 +5,7 @@ Site stats
 </div>
         
         
-<div class="fr-list">
+<div class="fr-stats">
 <ul>
 number of users: <%= @users.length %><br>
 number of field recordings: <%= @field_recordings.length %><br>
@@ -16,19 +16,27 @@ number of comments: <%= @comments.length %><br>
 
 <br>
 <br>
-Field Recording views<br>
+Field Recording views
+<br>
+<br>
 <% @field_recordings.each do |f| %>
-<%=  "#{f.title}: #{f.impressionist_count}" %><br>
+<%=  link_to "#{f.title}:", field_recording_path(f.id) %><%=" #{f.impressionist_count}"%><br>
 <% end %>
 <br>
-Artist views<br>
+<br>
+Artist views
+<br>
+<br>
 <% @artists.each do |a| %>
-<%=  "#{a.name}: #{a.impressionist_count}" %><br>
+<%=  link_to "#{a.name}:", artist_path(a.id) %><%= " #{a.impressionist_count}"%><br>
 <% end %>
 <br>
-Location views<br>
+<br>
+Location views
+<br>
+<br>
 <% @locations.each do |l| %>
-<%=  "#{l.name}: #{l.impressionist_count}" %><br>
+<%=  link_to "#{l.name}:", location_path(l.id)%><%= " #{l.impressionist_count}"%><br>
 <% end %>
 <br>
 
