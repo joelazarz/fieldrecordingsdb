@@ -13,8 +13,8 @@
 <% if user_logged_in? %>
 <% if !followed? %>
 <h3><%= link_to "+ follow", create_follow_path, method: :put %></h3>
-<h3><%= link_to "+ edit", edit_artist_path %></h3>
 <% else %>
+<h3><%= link_to "+ edit", edit_artist_path %></h3>
 <h3><%= link_to "- unfollow", delete_follow_path, method: :delete %></h3>
 <% end %>
 <% end %>
