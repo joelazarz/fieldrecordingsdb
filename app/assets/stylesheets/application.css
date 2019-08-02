@@ -178,6 +178,7 @@ body {
 }
 
 
+
 /* field recordings index */
 
 .fr-header {
@@ -243,6 +244,7 @@ body {
 }
 
 .fr-comments img {
+    margin-bottom: 2em;
     width: 100%;
     height: auto;
 }

@@ -5,6 +5,11 @@
 </div>
 
 <div id="follow-button">
+
+</div>
+
+
+<div class="artist-content">
 <% if user_logged_in? %>
 <% if !followed? %>
 <h3><%= link_to "follow", create_follow_path, method: :put %></h3>
@@ -12,10 +17,6 @@
 <h3><%= link_to "unfollow", delete_follow_path, method: :delete %></h3>
 <% end %>
 <% end %>
-</div>
-
-
-<div class="artist-content">
 <h3>+ Field Recordings</h3>
 <ul><% @field_recordings.each do |f|%>
 <li><%= link_to f.title + " " + f.date.to_s, field_recording_path(f.id)%></li>
