@@ -46,6 +46,15 @@ body {
 
 
  /* top of every page nav bar  */
+
+
+ @media only screen and (max-width: 600px) {
+    .navigation {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
 .nav-bar-top {
     display: flex; 
     position: fixed;
@@ -190,21 +199,19 @@ body {
 .fr-header {
     font-family: 'Fira Code', monospace;
     color: rgb(17, 17, 17);
-    font-size: 7em;
+    font-size: 4em;
     grid-column-start: 1;
     grid-column-end: 5;
-    justify-self: center;
 }
 
 .fr-list {
     color: rgb(17, 17, 17);
+    font-family: 'Fira Code', monospace;
     font-size: 2em;
     grid-row-start: 2;
     grid-column-start: 1;
     grid-column-end: 5;
-    justify-self: center;
 }
-
 
 
 /* field recordings show */
